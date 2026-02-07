@@ -1,0 +1,490 @@
+/* Général */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+
+/*correction pour affichage sur mobile */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+/* HEADER */
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+} 
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff6347; 
+}
+
+/* Bouton scroll menu NAV VERSSION PRO ANIMATION SLIDE  */
+.menu-toggle {
+
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: rgb(105, 99, 99);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+
+
+/* HERO */
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#hero .button {
+  background-color: #ff6347;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/*pour activé le survol hover et déclonché la trasition mentionné au dessus*/
+#hero .button:hover {
+  background-color: #e5533b;
+}
+
+
+/* À PROPOS */
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px;
+}
+
+#about .about-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+
+#about .about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  height: auto;
+}
+
+/* MENU */
+#menu {
+  background-color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/*.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}*/
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.menu-category {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.menu-category img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-category h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.menu-category ul {
+  list-style: none;
+}
+
+.menu-category li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.menu-category span {
+  font-weight: bold;
+}
+
+/* HORAIRES */
+.hours {
+  background-color: #ff6347;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* CONTACT */
+#contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+
+.contact-form {
+  margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #ff6347;
+  padding: 15px 30px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+/*effet hover*/
+.contact-form button:hover {
+  background-color: #e5533b;
+  cursor: pointer;
+  opacity: 0.9;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+   color: #c0392b;
+}
+
+.contact-info {
+  font-size: 1.2rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/*responsive design pour mobile */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 0 15px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  #about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about-text {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  #about-image {
+    width: 100%;
+    height: auto;
+  }
+
+  #about-image img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+
+/* Bouton menu pour mobile */   /* menu burger visible même en scrollant vers le bas */
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: -100%; /* commence hors écran */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    gap: 20px;
+    padding-top: 70px;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+  }
+
+  nav ul.active {
+    top: 0; /* slide vers le bas */
+  }
+
+}
+
+
+/* =========================
+   TYPOGRAPHIE GÉNÉRALE
+   ========================= */
+
+/* Police simple, lisible et professionnelle */
+body {
+  font-family: Arial, Helvetica, sans-serif; /* police de base claire compatible partout */
+  line-height: 1.6; /* espace entre les lignes (très important) */
+  color: #222;      /* noir doux (plus agréable que noir pur) */
+}
+
+/* Titre principal */
+h1 {
+  font-size: 2.5rem;      /* grand mais pas excessif */
+  margin-bottom: 20px;   /* espace en dessous */
+}
+
+/* Titres des sections */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  margin-top: 40px; /* espace avant chaque section */
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Ajustement mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* =========================
+   STRUCTURE & ESPACEMENTS
+   ========================= */
+
+/* Conteneur principal */ /*Explication : Tout centré → lecture simple et esthétique Largeur limitée → le texte n’est jamais trop étiré*/
+.container {
+  max-width: 1100px;  /* largeur confortable */
+  margin: 0 auto;     /* centre le contenu */
+  padding: 0 20px;    /* espace sur les côtés (mobile) */
+}
+
+/* Espacement vertical des sections */
+#hero , #about , #menu , #contact {
+  padding: 60px 0;
+}
+
+/* Images responsive et propres */
+#about-image img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Espacement vertical des sections pour mobile */
+@media (max-width: 768px) {
+  #hero , #about , #menu , #contact  {
+    padding: 40px 0;
+  }
+}
+
+/*effet visuel menu catégorie*/
+.menu-category {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.menu-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   COULEURS COHÉRENTES
+   ========================= */
+
+:root {
+  --color-primary: #c0392b; /* couleur principale (rouge foncé) */
+  --color-secondary: #f4f4f4; /* couleur de fond ou textes secondaires */
+   --color-text: #222;
+  --color-hover: #e74c3c; /* couleur au survol */
+}
+
+body {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+/* Bordures et arrondis uniformes */
+.contact-form, .menu-category {
+  border-radius: 8px; /* arrondi léger et uniforme */
+  border: none;       /* pas de bordure par défaut */
+}
+
+#about p, #hero p, .hours container p {
+  text-align: center;
+}
+
+/* Menu navigation hover */
+.nav-links a:hover {
+  color: var(--color-hover);
+}
+
+
+/* Scroll smooth : la page descend doucement en cliquant sur un menu*/
+html {
+  scroll-behavior: smooth;
+}
+
+/* image hero backgroud */ 
+.hero {
+  height: 70vh; /* pleine hauteur de l'écran */
+  background-image: url("images/img1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+  .hero-content {
+  
+  padding: 30px;
+  color: #fff;
+  text-align: center;
+  
+  }
+
+  @media (max-width: 768px) {
+  #hero {
+    min-height: 60vh;
+  }
+}
+

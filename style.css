@@ -1,0 +1,476 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #2563EB;
+  --bg-light: #F8FAFC;
+  --text-dark: #1E293B;
+  --text-light: #64748B;
+}
+
+
+:root {
+  --main-color: #e63946;
+}
+
+/*==== couleurs globales =====*/
+body {
+  background: var(--bg-light);
+  color: var(--text-dark);
+}
+
+p {
+  color: var(--text-light);
+}
+
+h1, h2, h3 {
+  color: var(--text-dark);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f4f6f8; /* gris clair moderne */
+
+}
+
+/* ===== SMOOTH SCROLL ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.5px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 16px;
+  color: #555;
+}
+
+
+/* ===== HERO ===== */
+#hero {
+  text-align: center;
+}
+
+#hero a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* ===== À PROPOS ( presentaion ) ===== */
+#about p {
+  max-width: 800px;
+  margin: 15px auto;
+  line-height: 1.7;
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+
+/* ===== services ===== */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.service-card {
+  background: #f4f6f8;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* ===== PROJETS ===== */
+.projects-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: #f5f5f5;
+  padding: 25px;
+  border-radius: 10px;
+  flex: 1;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--main-color);
+}
+
+/* ===== avantages ===== */
+.advantages-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.advantage-card {
+  background: #ffffff;
+  border-left: 4px solid var(--main-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+
+/* ===== COMPÉTENCES ===== */
+#skills ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+#skills li {
+  background: #f4f6f8;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+#skills li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ===== CONTACT ===== */
+
+#contact {
+  text-align: center;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 80px 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+#contact p {
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+.contact-info {
+  margin-top: 25px;
+  background: var(--bg-light);
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+
+/* ===== NAVIGATION ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.logo {
+  color: var(--main-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--main-color);
+}
+
+/* ===== BURGER ===== */
+.burger {
+  display: none; /* caché sur desktop */
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* ===== BURGER ANIMATION ===== */
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== section Projets ===== */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 230px;        /* hauteur identique */
+  object-fit: cover;   /* recadre l’image sans la déformer */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-card {
+  display: block;           /* nécessaire pour que <a> soit en block */
+  position: relative;
+  cursor: pointer;          /* main sur toute la carte */
+  text-decoration: none;    /* enlève le souligné par défaut */
+  color: inherit;           /* conserve la couleur du texte */
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.project-card:active {
+  transform: scale(0.98);
+}
+
+/* ===== texte carte ===== */
+.project-card h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Badge “Voir le projet” */
+.project-card span {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: var(--main-color, #0077ff);
+  color: #fff;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.project-card span:hover {
+  background: #005fcc;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr; 
+  }
+
+  .project-card img {
+    height: 220px; /* optionnel, plus visible sur mobile */
+  }
+
+  section {
+    padding: 60px 15px;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+    }
+  }
+
+}
+
+
+/* ===== NAVIGATION MOBILE ===== */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: row;          /* logo à gauche, burger à droite */
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-links li {
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08); /* séparation entre les liens */
+  }
+
+   .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 16px 0;
+    font-size: 18px;
+  }
+}
+
+/* ===== BURGER mobile ACTIVE  ===== */
+@media (max-width: 768px) {
+
+  .burger {
+    display: flex; /* burger visible */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;        /* juste sous la navbar */
+    left: 0;
+    width: 100%;
+    background: #242424; /* gris foncé pro */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    
+  }
+
+  .nav-links.active {
+    display: flex; /* menu visible quand actif */
+    flex-direction: column;
+  }
+}
+
+/* ===== NAV LINKS HOVER MOBILE ===== */
+@media (max-width: 768px) {
+
+  .nav-links a {
+    color: #f1f1f1;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+  }
+}
+
+
+/* ===== BOUTON WHATSAPP ===== */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25D366;
+  color: white;
+  font-size: 24px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+/* effet pulsation bouton */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.whatsapp-btn {
+  animation: pulse 2s infinite;
+}

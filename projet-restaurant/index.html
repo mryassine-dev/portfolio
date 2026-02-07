@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Le Jardin Gourmand | Restaurant</title>
+  <meta name="description" content="Le Jardin Gourmand – Restaurant convivial avec cuisine savoureuse et ambiance chaleureuse.">
+
+  <!-- Google Font (exemple) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">Le Jardin Gourmand</div>
+      <!-- <button class="menu-toggle" aria-label="Ouvrir le menu">
+          ☰
+        </button> --> 
+        <!-- NOUVELLE VERSION PRO BOUTTON BURGER AVEC DES SPAN  -->
+        <button class="menu-toggle" aria-label="Ouvrir le menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      <ul class="nav-links">
+        <li><a href="#hero">Accueil</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-content container">
+      <h1>Cuisine authentique & ambiance chaleureuse</h1>
+      <p>Découvrez des plats préparés avec passion et des produits frais.</p>
+      <a href="#contact" class="button">Réserver une table</a>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section id="about" class="about container">
+    <div class="about-text">
+      <h2>À propos de nous</h2>
+      <p>
+        Le Jardin Gourmand vous accueille dans un cadre élégant et convivial,
+        pour vous faire découvrir une cuisine savoureuse inspirée des meilleurs
+        produits locaux.
+      </p>
+    </div>
+
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1555992336-03a23c29d45f" alt="Intérieur du restaurant">
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="menu">
+    <div class="container">
+      <h2>Notre Menu</h2>
+
+      <div class="menu-grid">
+        <!-- Entrées -->
+        <div class="menu-category">
+          <img src="images/entree.jpg" alt="Entrées">
+          <h3>Entrées</h3>
+          <ul>
+            <li>Salade fraîche — <span>45 DH</span></li>
+            <li>Soupe du jour — <span>35 DH</span></li>
+          </ul>
+        </div>
+
+        <!-- Plats -->
+        <div class="menu-category">
+          <img src="images/plat.jpg" alt="Plats">
+          <h3>Plats</h3>
+          <ul>
+            <li>Poulet grillé — <span>85 DH</span></li>
+            <li>Pâtes maison — <span>75 DH</span></li>
+          </ul>
+        </div>
+
+        <!-- Desserts -->
+        <div class="menu-category">
+          <img src="images/dessert.jpg" alt="Desserts">
+          <h3>Desserts</h3>
+          <ul>
+            <li>Tiramisu — <span>40 DH</span></li>
+            <li>Crème caramel — <span>35 DH</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORAIRES -->
+  <section class="hours container">
+    <h2>Horaires d’ouverture</h2>
+    <p>Lundi – Dimanche : 12h00 – 23h00</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact & Réservation</h2>
+
+      <form class="contact-form">
+        <input type="text" placeholder="Votre nom" required>
+        <input type="email" placeholder="Votre email" required>
+        <textarea placeholder="Votre message" required></textarea>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+
+      <p class="contact-info">
+        📞 +212 6 00 00 00 00 <br>
+        📍 Casablanca, Maroc
+      </p>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Le Jardin Gourmand. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Script JAVA pour le boutton menu mobile -->
+  <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+
+  console.log(menuToggle, navMenu); // 🔴 TEST
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active'); // transforme burger en croix
+    console.log('click');
+
+    
+  // fermer menu au clic sur un lien
+  const navLinks = document.querySelectorAll('nav ul li a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      menuToggle.classList.remove('active');
+    });
+  });
+  });
+</script>
+
+</body>
+</html>

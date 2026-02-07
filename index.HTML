@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio | Développeur Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <!-- icône WhatsApp -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<nav class="navbar">
+  <h2 class="logo">Portfolio</h2>
+
+  <div class="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="#hero">Accueil</a></li>
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#projects">Projets</a></li>
+    <li><a href="#skills">Compétences</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <h1>Développeur Web Junior</h1>
+    <p>Je crée des sites web modernes, responsive et performants</p>
+    <a href="#projects">Voir mes projets</a>
+  </section>
+
+  <!-- ===== À PROPOS presentation ===== -->
+  <section id="about">
+    <h2>Présentation</h2>
+
+    <p>
+      Je suis développeur web junior, spécialisé en HTML, CSS et JavaScript.
+      J’aide à créer des sites web modernes, clairs et adaptés à tous les écrans,
+      <strong>conçus pour mettre en valeur votre entreprise, vos services ou vos projets.</strong>
+    </p>
+
+    <p>
+      Mon objectif est de proposer des sites simples, bien structurés et faciles à utiliser,
+      que ce soit pour un site vitrine, un portfolio ou un petit projet professionnel.
+    </p>
+  </section>
+
+  <!-- ===== services ===== -->
+
+  <section id="services">
+    <h2>Ce que je vous propose</h2>
+
+    <div class="services-container">
+      <div class="service-card">Création de sites vitrines modernes</div>
+      <div class="service-card">Intégration HTML / CSS à partir d’une maquette</div>
+      <div class="service-card">Sites responsive (ordinateur, tablette, mobile)</div>
+      <div class="service-card">Amélioration du design et de la lisibilité</div>
+      <div class="service-card">Intégration de formulaires de contact</div>
+      <div class="service-card">Correction et optimisation de pages existantes</div>
+    </div>
+  </section>
+
+
+  <!-- ===== PROJETS ===== -->
+
+  <section id="projects">
+    <h2>Mes projets</h2>
+
+    <div class="projects-container">
+
+      <!-- Projet 1 -->
+
+      <a href="projet-restaurant/index.html" target="_blank" class="project-card">
+        <img src="images/restaurant.jpg" alt="Site Restaurant">
+        <h3>Site Restaurant</h3>
+        <p>
+          Site vitrine pour un restaurant avec menu interactif, design responsive
+          et navigation fluide adaptée pour mobile et desktop.
+        </p>
+        <p><strong>Technologies :</strong> HTML, CSS, JavaScript</p>
+        <span>Voir le projet</span>
+      </a>
+
+      <!-- Projet 2 -->
+
+      <a href="projet-coach-sportif/index.html" target="_blank" class="project-card">
+        <img src="images/salle.jpg" alt="coach sportif">
+        <h3>Coach Sportif</h3>
+        <p>
+          Site professionnel pour coach sportif avec services,
+          avantages, avis clients et contact.
+        </p>
+        <p><strong>Technologies :</strong> HTML, CSS</p>
+        <span>Voir le projet</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ===== avantages ===== -->
+
+  <section id="advantages">
+  <h2>Pourquoi me choisir ?</h2>
+
+  <div class="advantages-container">
+    <div class="advantage-card">Code clair et bien organisé</div>
+    <div class="advantage-card">Design simple et professionnel</div>
+    <div class="advantage-card">Site rapide et responsive</div>
+    <div class="advantage-card">Communication simple et à l’écoute</div>
+    <div class="advantage-card">Travail sérieux, même sur de petits projets</div>
+    <div class="advantage-card">Assistance après livraison</div>
+  </div>
+</section>
+
+
+  <!-- ===== COMPÉTENCES ===== -->
+  <section id="skills">
+    <h2>Compétences</h2>
+
+    <ul>
+      <li>HTML5 — structure sémantique</li>
+      <li>CSS3 — Flexbox, Responsive design</li>
+      <li>JavaScript</li>
+      <li>Visual Studio Code</li>
+    </ul>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <p>
+    Vous avez un projet ou une idée à développer ?
+    Je suis disponible pour échanger et discuter de votre besoin.
+  </p>
+
+  <div class="contact-info">
+    <p><strong>Email :</strong> tonemail@email.com</p>
+    <p><strong>Téléphone :</strong> +212 XXX XXX XXX</p>
+    <p><strong>Localisation :</strong> Casablanca, Maroc</p>
+  </div>
+</section>
+
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links a');
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active'); 
+      navLinks.classList.toggle('active');
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        burger.classList.remove('active');
+      });
+    });
+  </script>
+
+<!-- ===== BOUTON WHATSAPP ===== -->
+<a href="https://wa.me/212XXXXXXXXX" 
+   class="whatsapp-btn" 
+   target="_blank">
+   <i class="fab fa-whatsapp"></i>
+</a>
+
+
+
+</body>
+</html>
